@@ -47,16 +47,23 @@
 }
 
 .cardOpen {
-  border-left: 4px solid var(--success);
+  text-align: center;
   color: white;
+  border-left: 4px solid var(--success);
+  border-radius: 1rem;
 }
 
 .cardInProg {
-  border-left: 4px solid var(--warn);
+  text-align: center;
   color: white;
+  border-left: 4px solid var(--warn);
+  border-radius: 1rem;
 }
 
 .cardClosed {
+  text-align: center;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.06);
   border-left: 4px solid rgba(255, 255, 255, 0.06);
   color: white;
 }
