@@ -50,7 +50,7 @@ export default function App() {
             ) : (
               <div className={styles.headerContainer}>
                 <Link to="/" className={styles.brand} data-testid="link-home">
-                  <img src="/public/Ticketry-logo.png" alt="Brand logo" />
+                  <img src="/public/Ticketry-logo.jpg" alt="Brand logo" />
                   Ticketry
                 </Link>
                 <div className={styles.headerRight}>

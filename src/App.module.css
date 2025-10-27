@@ -1,98 +1,202 @@
 .app {
-  min-height: 100%;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background: var(--background, #0f172a);
+  color: white;
+  font-family: "Poppins", sans-serif;
 }
+
 .brand {
   display: flex;
-  justify-content: left;
+  justify-content: flex-start;
   align-items: center;
   font-weight: 700;
   color: white;
   text-decoration: none;
-  font-size: 1.125rem;
+  font-size: 1.25rem;
+  gap: 0.75rem;
 }
 
 .brand img {
   background-color: aliceblue;
   height: 3rem;
+  width: 3rem;
   border-radius: 50%;
+  object-fit: cover;
 }
 
 .nav {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
   align-items: center;
+  flex-wrap: wrap;
 }
+
 .navLink {
-  color: var(--muted);
+  color: var(--muted, #d1d5db);
   text-decoration: none;
+  transition: all 0.3s ease;
 }
 
 .navLink:hover {
-  text-shadow: 0.2rem 0.2rem 0.2rem coral;
+  text-shadow: 0.2rem 0.2rem 0.3rem coral;
+  color: white;
 }
 
 .headerContainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 90rem;
+  width: 90%;
+  max-width: 1200px;
   height: 4rem;
-  background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
+  background: linear-gradient(
+    90deg,
+    var(--accent-1, #f87171),
+    var(--accent-2, #fb923c)
+  );
   border-radius: 2rem;
-  margin-top: 1.5rem;
-  padding: 0rem 2rem;
+  margin: 1.5rem auto 0;
+  padding: 0 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .headerRight {
-  width: 13rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  gap: 1rem;
+  flex-shrink: 0;
 }
 
 .navLinkLogin {
   text-decoration: none;
   background-color: darksalmon;
-  width: 4.8rem;
+  color: white;
+  min-width: 5rem;
   text-align: center;
-  justify-items: baseline;
-  padding: 0.6rem;
-  border-radius: 1.2rem;
-  font-weight: 800;
+  padding: 0.6rem 1rem;
+  border-radius: 1rem;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+.navLinkLogin:hover {
+  background-color: #ef4444;
 }
 
 .cta {
-  background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
+  background: linear-gradient(
+    90deg,
+    var(--accent-1, #f87171),
+    var(--accent-2, #fb923c)
+  );
   color: white;
-  padding: 0.5rem 0.9rem;
+  padding: 0.5rem 1rem;
   border-radius: 999px;
   text-decoration: none;
   font-weight: 600;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
+
+.cta:hover {
+  transform: scale(1.05);
+}
+
 .btnGhost {
   background: transparent;
-  border: 1px solid var(--glass-border);
-  width: 35rem;
-  padding: 0.4rem 0.7rem;
+  border: 1px solid var(--glass-border, rgba(255, 255, 255, 0.2));
+  padding: 0.5rem 0.8rem;
   border-radius: 10px;
-  color: var(--muted);
+  color: var(--muted, #cbd5e1);
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .btnGhost:hover {
   background-color: #ef4444;
   color: #ffffff;
-  transform: scale(0.9);
+  transform: scale(0.95);
 }
 
 .main {
   flex: 1;
-  padding: 2rem 0;
+  padding: 2rem 1rem;
 }
+
 .footer {
   margin: 0 auto;
-  border-top: 1px solid rgba(255, 255, 255, 0.02);
-  color: var(--muted);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--muted, #94a3b8);
+  padding: 1rem 0;
+  text-align: center;
+}
+
+@media (max-width: 980px) {
+  .headerContainer {
+    width: 95%;
+    padding: 0 1rem;
+    border-radius: 1.5rem;
+  }
+
+  .headerRight {
+    gap: 0.6rem;
+  }
+
+  .navLinkLogin {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .headerContainer {
+    flex-direction: row;
+    align-items: flex-start;
+    height: auto;
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+    gap: 0.8rem;
+  }
+
+  .cta {
+    background: linear-gradient(
+      90deg,
+      var(--accent-1, #f87171),
+      var(--accent-2, #fb923c)
+    );
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+
+  .navLinkLogin {
+    font-size: 0.8rem;
+    border-radius: 0.5rem;
+  }
+}
+
+/* Very small devices */
+@media (max-width: 500px) {
+  .headerRight {
+    display: none;
+  }
+
+  .headerContainer {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .brand {
+    justify-content: center;
+    font-size: 1rem;
+  }
 }

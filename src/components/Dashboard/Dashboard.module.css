@@ -1,21 +1,32 @@
 .wrap {
   color: white;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem;
 }
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
 }
+
 .header .sub {
   color: var(--muted);
   margin: 0;
+  font-size: 0.95rem;
 }
+
 .grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
+
 .card {
   background: linear-gradient(
     180deg,
@@ -27,35 +38,104 @@
   text-align: center;
   border: 1px solid rgba(255, 255, 255, 0.03);
   color: var(--muted);
+  transition: all 0.3s ease;
 }
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
 .cardOpen {
-  composes: card;
   border-left: 4px solid var(--success);
   color: white;
 }
+
 .cardInProg {
-  composes: card;
   border-left: 4px solid var(--warn);
   color: white;
 }
+
 .cardClosed {
-  composes: card;
   border-left: 4px solid rgba(255, 255, 255, 0.06);
   color: white;
 }
+
 .actions {
-  margin-top: 3rem;
+  margin-top: 2.5rem;
+  display: flex;
+  justify-content: center;
 }
+
 .btn {
   background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
   color: white;
-  padding: 0.6rem 1rem;
+  padding: 0.6rem 1.2rem;
   border-radius: 12px;
   text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 }
 
 @media (max-width: 1440px) {
   .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 1024px) {
+  .grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrap {
+    padding: 1rem;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .header {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .wrap {
+    padding: 0.75rem;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .card {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 0.7rem;
+    font-size: 0.95rem;
   }
 }
