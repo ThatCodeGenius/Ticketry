@@ -1,0 +1,133 @@
+.hero {
+  position: relative;
+  padding: 3.5rem 0 1rem;
+  color: white;
+}
+.wave {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 160px;
+  pointer-events: none;
+}
+.inner {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 2rem;
+  align-items: center;
+}
+.left {
+  padding: 2rem 0;
+}
+.title {
+  font-size: 2rem;
+  margin: 0 0 0.5rem;
+  color: #ffffff;
+}
+
+.title span {
+  font-size: 1.2rem;
+  color: #f4e8e8;
+}
+
+.subtitle {
+  color: var(--muted);
+  margin: 0 0 1.25rem;
+}
+.ctas {
+  display: flex;
+  gap: 0.75rem;
+}
+.primary {
+  background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
+  padding: 0.6rem 1rem;
+  border-radius: 12px;
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+}
+.secondary {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.55rem 1rem;
+  border-radius: 12px;
+  color: var(--muted);
+  text-decoration: none;
+}
+.right {
+  position: relative;
+  min-height: 220px;
+}
+.circle {
+  position: absolute;
+  right: 2%;
+  top: -40px;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-1), #9b7bff);
+  box-shadow: 0 12px 40px rgba(124, 92, 255, 0.18);
+}
+.circleSmall {
+  position: absolute;
+  right: 24%;
+  top: 80px;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--accent-2), #6fe8ff);
+  box-shadow: 0 8px 26px rgba(0, 194, 255, 0.12);
+}
+.card {
+  position: relative;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.02),
+    rgba(255, 255, 255, 0.01)
+  );
+  backdrop-filter: blur(8px);
+  border-radius: 14px;
+  padding: 1rem;
+  box-shadow: 0 8px 30px rgba(2, 6, 23, 0.4);
+  margin-bottom: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  color: var(--muted);
+}
+.cardAccent {
+  background: linear-gradient(
+    90deg,
+    rgba(124, 92, 255, 0.12),
+    rgba(0, 194, 255, 0.08)
+  );
+  padding: 1rem;
+  border-radius: 14px;
+  color: white;
+  margin-top: 1rem;
+}
+.statsBar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.statCard {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.02),
+    rgba(255, 255, 255, 0.01)
+  );
+  padding: 1rem;
+  border-radius: 12px;
+  color: var(--muted);
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+@media (max-width: 1440px) {
+  .inner {
+    grid-template-columns: 1fr;
+  }
+  .right {
+    display: none;
+  }
+}

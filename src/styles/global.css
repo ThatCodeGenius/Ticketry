@@ -1,0 +1,44 @@
+:root {
+  --maxw: 1440px;
+  --bg-100: #0f172a; /* deep navy */
+  --bg-50: #0b1220; /* near black for accents */
+  --glass-1: rgba(255, 255, 255, 0.04);
+  --glass-2: rgba(255, 255, 255, 0.06);
+  --accent-1: #7c5cff; /* violet */
+  --accent-2: #00c2ff; /* cyan */
+  --muted: #9aa4b2;
+  --success: #10b981;
+  --warn: #f59e0b;
+  --danger: #ef4444;
+  --card-bg: rgba(255, 255, 255, 0.02);
+  --glass-border: rgba(255, 255, 255, 0.06);
+}
+* {
+  box-sizing: border-box;
+}
+html,
+body,
+#root {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial;
+  color: var(--muted);
+  background: linear-gradient(180deg, var(--bg-100), #071023);
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Utility classes that are safe to use across modules */
+.u-container {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 1.25rem;
+}
+.u-btn {
+  cursor: pointer;
+}

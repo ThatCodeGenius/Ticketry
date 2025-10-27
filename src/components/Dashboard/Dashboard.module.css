@@ -1,0 +1,61 @@
+.wrap {
+  color: white;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .sub {
+  color: var(--muted);
+  margin: 0;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.card {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.02),
+    rgba(255, 255, 255, 0.01)
+  );
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  color: var(--muted);
+}
+.cardOpen {
+  composes: card;
+  border-left: 4px solid var(--success);
+  color: white;
+}
+.cardInProg {
+  composes: card;
+  border-left: 4px solid var(--warn);
+  color: white;
+}
+.cardClosed {
+  composes: card;
+  border-left: 4px solid rgba(255, 255, 255, 0.06);
+  color: white;
+}
+.actions {
+  margin-top: 3rem;
+}
+.btn {
+  background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
+  color: white;
+  padding: 0.6rem 1rem;
+  border-radius: 12px;
+  text-decoration: none;
+}
+
+@media (max-width: 1440px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

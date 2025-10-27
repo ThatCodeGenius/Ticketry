@@ -1,0 +1,69 @@
+.card {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.02),
+    rgba(255, 255, 255, 0.01)
+  );
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.title {
+  margin: 0;
+  font-size: 1rem;
+}
+.tag {
+  font-size: 0.8rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--muted);
+}
+.desc {
+  color: var(--muted);
+  margin: 0 0 0.75rem;
+}
+.actions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+}
+.edit {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  padding: 0.35rem 0.6rem;
+  border-radius: 8px;
+  color: var(--muted);
+  cursor: pointer;
+}
+.del {
+  background: var(--danger);
+  color: white;
+  border: none;
+  padding: 0.35rem 0.6rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.open .tag {
+  background: rgba(16, 185, 129, 0.12);
+  color: var(--success);
+}
+.in_progress .tag {
+  background: rgba(245, 158, 11, 0.12);
+  color: var(--warn);
+}
+.closed .tag {
+  background: rgba(255, 255, 255, 0.02);
+  color: var(--muted);
+}

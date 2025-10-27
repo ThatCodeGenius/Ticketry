@@ -1,0 +1,98 @@
+.app {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.brand {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  font-weight: 700;
+  color: white;
+  text-decoration: none;
+  font-size: 1.125rem;
+}
+
+.brand img {
+  background-color: aliceblue;
+  height: 3rem;
+  border-radius: 50%;
+}
+
+.nav {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.navLink {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.navLink:hover {
+  text-shadow: 0.2rem 0.2rem 0.2rem coral;
+}
+
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90rem;
+  height: 4rem;
+  background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
+  border-radius: 2rem;
+  margin-top: 1.5rem;
+  padding: 0rem 2rem;
+}
+
+.headerRight {
+  width: 13rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navLinkLogin {
+  text-decoration: none;
+  background-color: darksalmon;
+  width: 4.8rem;
+  text-align: center;
+  justify-items: baseline;
+  padding: 0.6rem;
+  border-radius: 1.2rem;
+  font-weight: 800;
+}
+
+.cta {
+  background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
+  color: white;
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 600;
+}
+.btnGhost {
+  background: transparent;
+  border: 1px solid var(--glass-border);
+  width: 35rem;
+  padding: 0.4rem 0.7rem;
+  border-radius: 10px;
+  color: var(--muted);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.btnGhost:hover {
+  background-color: #ef4444;
+  color: #ffffff;
+  transform: scale(0.9);
+}
+
+.main {
+  flex: 1;
+  padding: 2rem 0;
+}
+.footer {
+  margin: 0 auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.02);
+  color: var(--muted);
+}
